@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.grid{
+    display: grid;
+    width: 80vw;
+    margin: 5vh auto;
+    height: auto;
+    grid-gap: 30px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr;
+}
+.items{
+    background-color: royalblue;
+    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 1px 0px 23px -3px rgba(80,77,77,0.75);
+    -webkit-box-shadow: 1px 0px 23px -3px rgba(80,77,77,0.75);
+    -moz-box-shadow: 1px 0px 23px -3px rgba(80,77,77,0.75);
+}
+.items img{
+    border-radius: 50%;
+    width: 40px;
+}
+.purple{
+    grid-column: 1/3;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 90% top;
+}
+.name{
+    margin-left: 3%;
+}
+.name p:first-of-type{
+    color: white;
+    margin: 0;
+}
+.name p:last-of-type{
+    color: white;
+    margin: 0;
+    opacity: 50%;
+}
+.info{
+    display: flex;
+    align-items: center;
+}
+.items h1{
+    font-size: 22px;
+    color: white;
+}
+.items>p{
+    color: white;
+    opacity: 50%;
+    font-size: 16px;
+}
+.gray{
+    background-color: hsl(217, 19%, 35%);
+}
+.bigWhite{
+    background-color: white;
+    grid-row: span 2;
+    padding: 10%;
+}
+.smallWhite{
+    background-color: white;
+}
+.bigWhite *, .smallWhite *{
+    color:  hsl(217, 44%, 34%) !important;
+}
+.dark{
+    grid-column: span 2;
+    background-color:  hsl(219, 29%, 14%);
+}
+@media screen and (min-width:2000px) {
+   .grid *{
+       font-size: 30px !important;
+   }
+}
+@media screen and (max-width: 800px){
+    .grid{
+        width: 100vw;
+        height: auto;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .gray{
+        grid-column: span 2;
+    }
+    .bigWhite{
+        grid-row: unset;
+        grid-column: span 2;
+    }
+    .smallWhite{
+        grid-column: span 2;
+    }
+
+    .dark{
+        grid-column: unset;
+        grid-column: span 2;
+    }
+}
